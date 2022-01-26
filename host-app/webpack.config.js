@@ -12,6 +12,7 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     devServer: {
+        static: path.join(__dirname, "dist"),
         port: 3000,
     },
     
@@ -33,10 +34,11 @@ module.exports = {
     plugins: [
         new ModuleFederationPlugin({
             name: 'host_app',
-            filename: 'index.js',
+            filename: 'remoteEntry.js',
             remotes: {
               tokenA : 'token_app@http://localhost:8080/remoteEntry.js'
             } 
+
         }),
         new HTMLWebpackPlugin({
             template: './src/index.html'

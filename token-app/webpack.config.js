@@ -35,7 +35,7 @@ module.exports = {
             name: 'token_app',
             filename: 'remoteEntry.js',
             exposes: {
-                './TokenGenerator.js': './src/TokenGenerator.js',
+                './TokenGenerator': './src/TokenGenerator.js',
                 './tokenWrapper': './src/tokenWrapper.js'
             }
         }),

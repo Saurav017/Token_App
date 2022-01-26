@@ -2,7 +2,8 @@ import ReactDOM from "react-dom";
 
 import TokenGenerator from "./TokenGenerator";
 
-export default mount = (el) => {
-    ReactDOM.render(TokenGenerator, el)
+export default function mount(el) {
+    // ReactDOM.render(TokenGenerator, el)
+    return ReactDOM.render(<TokenGenerator />, el);
 }
 
